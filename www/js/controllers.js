@@ -31,6 +31,7 @@ app.controller('AppCtrl', function($scope, $cordovaPush, $cordovaDialogs, $cordo
         }
 
         $cordovaPush.register(config).then(function (result) {
+            alert( result );
             console.log("Register success " + result);
 
             $cordovaToast.showShortCenter('Registered for push notifications');
